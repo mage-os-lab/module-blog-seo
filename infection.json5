@@ -1,0 +1,22 @@
+{
+    "$schema": "vendor/infection/infection/resources/schema.json",
+    // The bridge's logic is the mapping from a blog post to MageOS_Seo's article data and the switch
+    // that hands the post's structured data to MageOS_Seo; both are unit-tested. What reaches the
+    // page is covered by Test/Integration.
+    "source": {
+        "directories": ["Model", "Plugin"]
+    },
+    "mutators": { "@default": true },
+    "phpUnit": { "configDir": "." },
+    // Infection runs PHPUnit from the module directory, where Magento's code generator has never
+    // run; a test that doubles a generated class is tagged magento-generated and runs in the unit
+    // job, inside an installation.
+    "testFrameworkOptions": "--exclude-group=magento-generated",
+    // The same thresholds as MageOS_Seo.
+    "minMsi": 58,
+    "minCoveredMsi": 70,
+    "logs": {
+        "text": "infection.log",
+        "github": true
+    }
+}

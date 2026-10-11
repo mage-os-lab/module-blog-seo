@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- One BlogPosting per post: MageOS_Blog's is left out while MageOS_Seo writes the post's. -->
+    <type name="MageOS\Blog\ViewModel\Post\Detail">
+        <plugin name="mageos_blogseo_post_json_ld"
+                type="MageOS\BlogSeo\Plugin\Blog\PostDetailJsonLdPlugin"/>
+    </type>
+
+</config>

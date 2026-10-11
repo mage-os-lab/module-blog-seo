@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="MageOS_BlogSeo">
+        <sequence>
+            <!--
+                The two modules this one connects. Neither depends on the other: a class of one
+                naming the other's would stop setup:di:compile wherever the other is not installed.
+            -->
+            <module name="MageOS_Seo"/>
+            <module name="MageOS_Blog"/>
+        </sequence>
+    </module>
+</config>
