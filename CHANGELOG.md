@@ -8,6 +8,8 @@ hardcoded version field).
 
 ## [Unreleased]
 
+## [v1.0.0] 2026-10-12
+
 ### Added
 
 - **A blog post page is described once, by MageOS_Seo.** With MageOS_Blog and MageOS_Seo both
